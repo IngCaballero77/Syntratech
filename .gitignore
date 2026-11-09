@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env.local
+supabase/seed/CUENTAS_DE_PRUEBA.md
+supabase/backup/
+supabase/seed/crear_admin_juan_camilo.sql
+supabase/seed/admin_crear_o_restablecer.sql

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Blue S Curve -->
+  <path d="M68 20 C50 12, 28 20, 26 38 C24 54, 52 52, 58 64 C64 76, 50 86, 36 84 C28 83, 24 78, 22 74" 
+        stroke="#0284c7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Green Eco Leaf -->
+  <path d="M30 68 C22 55, 35 40, 52 42 C54 58, 42 72, 30 68 Z" 
+        fill="#22c55e" />
+  <path d="M30 68 C38 58, 48 48, 52 42" 
+        stroke="#15803d" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

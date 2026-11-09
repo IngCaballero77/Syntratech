@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.animate-scale {
+  animation: scale 0.3s ease-out;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* ===========================================================
+   Modo oscuro
+   Se activa con la clase "dark" en <html> (botón sol/luna del menú).
+   En vez de repetir "dark:" en cada componente, aquí se reasignan
+   los colores claros que usa la tienda a sus equivalentes oscuros.
+   =========================================================== */
+html.dark {
+  color-scheme: dark;
+}
+html.dark body {
+  background-color: #020617;
+  color: #e2e8f0;
+}
+
+/* Fondos */
+.dark .bg-slate-50 { background-color: #020617; }
+.dark .bg-slate-50\/70 { background-color: rgb(2 6 23 / 0.7); }
+.dark .bg-slate-50\/30 { background-color: rgb(30 41 59 / 0.3); }
+.dark .bg-white { background-color: #0f172a; }
+.dark .bg-white\/90 { background-color: rgb(15 23 42 / 0.9); }
+.dark .bg-white\/95 { background-color: rgb(15 23 42 / 0.95); }
+.dark .bg-slate-100 { background-color: #1e293b; }
+.dark .bg-slate-200 { background-color: #334155; }
+.dark .bg-slate-300 { background-color: #475569; }
+.dark .bg-slate-900 { background-color: #1e293b; }
+
+.dark .bg-sky-50 { background-color: rgb(14 165 233 / 0.12); }
+.dark .bg-sky-100 { background-color: #0c4a6e; }
+.dark .bg-emerald-50 { background-color: rgb(16 185 129 / 0.12); }
+.dark .bg-emerald-100 { background-color: #064e3b; }
+.dark .bg-rose-50 { background-color: rgb(244 63 94 / 0.12); }
+.dark .bg-rose-100 { background-color: #881337; }
+.dark .bg-amber-50 { background-color: rgb(245 158 11 / 0.12); }
+.dark .bg-amber-100 { background-color: #78350f; }
+
+.dark .hover\:bg-white:hover,
+.dark .hover\:bg-slate-50:hover,
+.dark .hover\:bg-slate-100:hover { background-color: #1e293b; }
+.dark .hover\:bg-slate-200:hover { background-color: #334155; }
+.dark .hover\:bg-sky-50:hover { background-color: rgb(14 165 233 / 0.15); }
+.dark .hover\:bg-sky-100:hover { background-color: rgb(14 165 233 / 0.25); }
+.dark .hover\:bg-rose-50:hover { background-color: rgb(244 63 94 / 0.15); }
+.dark .hover\:bg-rose-100:hover { background-color: rgb(244 63 94 / 0.25); }
+.dark .hover\:bg-amber-100:hover { background-color: rgb(245 158 11 / 0.25); }
+
+/* Textos */
+.dark .text-slate-900 { color: #f1f5f9; }
+.dark .text-slate-800 { color: #e2e8f0; }
+.dark .text-slate-700 { color: #cbd5e1; }
+.dark .text-slate-600 { color: #a3b0c2; }
+.dark .text-slate-500 { color: #94a3b8; }
+.dark .hover\:text-slate-900:hover,
+.dark .hover\:text-slate-800:hover,
+.dark .hover\:text-slate-700:hover { color: #f8fafc; }
+.dark .hover\:text-slate-600:hover { color: #e2e8f0; }
+
+.dark .text-sky-600, .dark .text-sky-700 { color: #38bdf8; }
+.dark .text-sky-800, .dark .text-sky-900 { color: #7dd3fc; }
+.dark .hover\:text-sky-600:hover, .dark .hover\:text-sky-700:hover { color: #7dd3fc; }
+.dark .text-emerald-600, .dark .text-emerald-700 { color: #34d399; }
+.dark .text-emerald-800 { color: #6ee7b7; }
+.dark .text-rose-600, .dark .text-rose-700 { color: #fb7185; }
+.dark .text-rose-800 { color: #fda4af; }
+.dark .text-amber-600, .dark .text-amber-700 { color: #fbbf24; }
+.dark .text-amber-800, .dark .text-amber-900 { color: #fcd34d; }
+.dark .text-indigo-600 { color: #818cf8; }
+
+/* Bordes y separadores */
+.dark .border-slate-100 { border-color: #1e293b; }
+.dark .border-slate-200 { border-color: #334155; }
+.dark .border-slate-300, .dark .hover\:border-slate-300:hover { border-color: #475569; }
+.dark .border-sky-200, .dark .border-sky-300 { border-color: rgb(56 189 248 / 0.35); }
+.dark .border-emerald-200 { border-color: rgb(52 211 153 / 0.3); }
+.dark .border-rose-100, .dark .border-rose-200, .dark .border-rose-300 { border-color: rgb(251 113 133 / 0.3); }
+.dark .border-amber-200, .dark .border-amber-300 { border-color: rgb(251 191 36 / 0.3); }
+.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]) { border-color: #1e293b; }
+.dark .ring-white { --tw-ring-color: #0f172a; }
+
+/* Campos de formulario sin fondo propio */
+.dark input:not([type='checkbox']):not([type='radio']):not([type='range']),
+.dark select,
+.dark textarea {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+.dark input::placeholder,
+.dark textarea::placeholder { color: #64748b; }
+
+/* Recuadros de pago (Nequi/Bancolombia/Nu y Wompi) en modo oscuro */
+.dark .bg-amber-50\/60 { background-color: rgb(245 158 11 / 0.1); }
+.dark .bg-indigo-50\/60 { background-color: rgb(99 102 241 / 0.12); }
+.dark .border-amber-100 { border-color: rgb(251 191 36 / 0.2); }
+.dark .border-indigo-200 { border-color: rgb(129 140 248 / 0.3); }
+.dark .text-indigo-800, .dark .text-indigo-900 { color: #c7d2fe; }
+.dark .text-sky-700 { color: #7dd3fc; }
+.dark .hover\:bg-amber-200:hover { background-color: #92400e; }
+.dark .bg-sky-50\/50 { background-color: rgb(14 165 233 / 0.12); }
